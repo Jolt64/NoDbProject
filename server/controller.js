@@ -56,23 +56,21 @@ module.exports = {
   editdog: (req, res) => {
     const { id } = req.params;
     const { name, age, weight, breed } = req.body;
-    console.log(req.params);
+    let dogholder = {
+      name,
+      age,
+      weight,
+      breed,
+      id: +id
+    };
 
     const index = dogs.findIndex(dog => dog.id == id);
 
     if (index === -1) {
       return res.status(400).send(dogs);
     } else {
-      dogs.splice(index, 1);
+      dogs.splice(index, 1, dogholder);
     }
-
-    dogs.push({
-      name,
-      age,
-      weight,
-      breed,
-      id: +id
-    });
 
     res.status(200).send(dogs);
   }

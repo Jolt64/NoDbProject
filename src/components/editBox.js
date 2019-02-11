@@ -13,6 +13,7 @@ export default class EditBox extends Component {
     };
   }
 
+  
   handleNameUd(value) {
     this.setState({
       nameUd: value
