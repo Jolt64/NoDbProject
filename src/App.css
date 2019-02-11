@@ -30,3 +30,17 @@
     transform: rotate(360deg);
   }
 }
+.mapedDogList div {
+  margin: 5px;
+  height: 300px;
+  width: 300px;
+  border-style: solid;
+}
+.addDogBox{
+  margin: 5px;
+  border-style: solid;
+}
+.EditBox{
+  margin: 5px;
+  border-style: solid;
+}
